@@ -1,0 +1,41 @@
+<!-- 用swiper模拟tab -->
+<view class="tab-header">
+  <view class="tab-item {{curTab == 0 ? 'cur' : ''}}" bindtap='changeTab' data-curtab="0">标签一</view>
+  <view class="tab-item {{curTab == 1 ? 'cur' : ''}}" bindtap='changeTab' data-curtab="1">标签二</view>
+</view>
+
+<view class="content" style="height:{{ch}}rpx;">
+  <swiper class="swiper" bindchange='swiperChange' current='{{curTab}}'>
+
+    <swiper-item>
+      <scroll-view scroll-y class="scroll" wx:if="{{curTab == 0}}">
+        <view class="tip">第一个tab</view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y class="scroll" wx:if="{{curTab == 1}}">
+        <view class="tip">第二个tab</view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+        <view class="item"></view>
+      </scroll-view>
+    </swiper-item>
+
+  </swiper>
+</view>
